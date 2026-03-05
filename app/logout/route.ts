@@ -10,7 +10,13 @@ export async function GET() {
   cookieStore.delete("userInfo");
 
   // Redirect to login page
-  return NextResponse.redirect(new URL("/login", process.env.NEXT_PUBLIC_URL || "http://localhost:3000"));
+  return NextResponse.redirect(
+    new URL(
+      "/login",
+      process.env.NEXT_PUBLIC_URL ||
+        "https://app-next-dashboard-git-main-halims-projects-7c20c629.vercel.app/",
+    ),
+  );
 }
 
 export async function POST() {
